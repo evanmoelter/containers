@@ -1,8 +1,0 @@
-# https://github.com/goss-org/goss/blob/e73553f9c3065ac297499dafb4f8abef6acb24ad/docs/manual.md#command
-command:
-  '--help':
-    exit-status: 0
-    exec: "--help"
-  '/usr/local/bin/par2 --help':
-    exit-status: 0
-    exec: "/usr/local/bin/par2 --help"
