@@ -6,4 +6,6 @@ channels:
     platforms: ["linux/amd64", "linux/arm64"]
     stable: true
     tests:
+      # goss tests do not currently work for shell-less containers
+      # see https://github.com/goss-org/goss/issues/870
       enabled: false
