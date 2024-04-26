@@ -1,0 +1,12 @@
+---
+# https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#process
+process:
+  sshd:
+    running: true
+
+# https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#port
+port:
+  tcp:22:
+    listening: true
+
+# TODO add more tests here?
