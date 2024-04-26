@@ -13,9 +13,9 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
     mkdir -p /var/run/sshd && \
     rm -f /etc/ssh/ssh_host_*key*
 
-COPY files/sshd_config /etc/ssh/sshd_config
-COPY files/create-sftp-user /usr/local/bin/
-COPY files/entrypoint /
+COPY ./apps/sftp/files/sshd_config /etc/ssh/sshd_config
+COPY ./apps/sftp/files/create-sftp-user /usr/local/bin/
+COPY ./apps/sftp/files/entrypoint /
 
 EXPOSE 22
 
