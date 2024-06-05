@@ -1,4 +1,4 @@
-FROM ghcr.io/evanmoelter/ubuntu:jammy-20240227@sha256:f0b79322e67508449652c3ad2def2f2a0d6ad90c2c2abf608835f73ae05e39ab
+FROM ghcr.io/evanmoelter/ubuntu:jammy-20240530@sha256:40e1a9e4b67787eb6ac89420835f674d64e0072f82f68d7066ceee1a0f18da30
 
 ARG TARGETPLATFORM
 ARG VERSION
