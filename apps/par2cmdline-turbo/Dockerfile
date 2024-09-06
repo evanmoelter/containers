@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.19 as build
+FROM docker.io/library/alpine:3.20 as build
 ARG TARGETARCH
 ARG VERSION
 WORKDIR /tmp
