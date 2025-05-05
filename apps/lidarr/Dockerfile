@@ -1,4 +1,4 @@
-FROM ghcr.io/evanmoelter/alpine:rolling@sha256:78d21d0a1c5957d978c06c1dccb444ae34f4ac690f800e3bf66474559a09fef6
+FROM ghcr.io/evanmoelter/alpine:rolling@sha256:b4dcecaa3ac9f9294fa8a74fa5fb7eb82b56b254099c7f8c2a0fb4356dfeb5e0
 
 ARG TARGETPLATFORM
 ARG VERSION
