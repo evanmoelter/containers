@@ -1,6 +1,6 @@
 # TODO: figure out how to build for multiple OS bases
 
-FROM debian:bullseye
+FROM debian:bookworm
 
 # Steps done in one RUN layer:
 # - Install packages
