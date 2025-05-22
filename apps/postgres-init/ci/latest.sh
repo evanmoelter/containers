@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-version=$(curl -sX GET "https://pkgs.alpinelinux.org/packages?name=postgresql16-client&branch=v3.19&arch" | grep -oP '(?<=<td class="version">)[^<]*' 2>/dev/null)
+version=$(curl -s "https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz" | tar -xzO 2>/dev/null | grep -P "P:postgresql16-client\n(.*\n)*?V:\K[^\n]+" --only-matching)
 version="${version%%_*}"
 version="${version%%-*}"
 printf "%s" "${version}"
