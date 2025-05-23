@@ -1,5 +1,5 @@
 ARG VERSION
-FROM docker.io/library/alpine:3.21 as builder
+FROM docker.io/library/alpine:3.21 AS builder
 ARG VERSION
 ARG TARGETOS
 ARG TARGETARCH
@@ -11,7 +11,7 @@ ENV GO111MODULE=on \
     GOARCH=${TARGETARCH} \
     GOARM=${TARGETVARIANT} \
     GOPATH=/go
-ENV PATH $GOPATH/bin:$PATH
+ENV PATH=$GOPATH/bin:$PATH
 #hadolint ignore=DL3018
 RUN \
     apk add --no-cache git go upx \
@@ -41,7 +41,7 @@ RUN \
         && chmod a+rx /mover-restic/*.sh \
     && rm -rf /tmp/*
 
-COPY --from=docker.io/rclone/rclone:1.69.2 /usr/local/bin/rclone /usr/local/bin/rclone
+COPY --from=docker.io/rclone/rclone:1.69.3 /usr/local/bin/rclone /usr/local/bin/rclone
 COPY --from=docker.io/restic/restic:0.18.0 /usr/bin/restic       /usr/local/bin/restic
 COPY --from=builder /go/bin/volsync /manager
 
