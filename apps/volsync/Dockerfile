@@ -1,5 +1,5 @@
 ARG VERSION
-FROM docker.io/library/alpine:3.21 as builder
+FROM docker.io/library/alpine:3.21 AS builder
 ARG VERSION
 ARG TARGETOS
 ARG TARGETARCH
@@ -11,7 +11,7 @@ ENV GO111MODULE=on \
     GOARCH=${TARGETARCH} \
     GOARM=${TARGETVARIANT} \
     GOPATH=/go
-ENV PATH $GOPATH/bin:$PATH
+ENV PATH=$GOPATH/bin:$PATH
 #hadolint ignore=DL3018
 RUN \
     apk add --no-cache git go upx \
